@@ -1,0 +1,10 @@
+body { background: #f3f4f7; }
+.app-header { background: #1f2a44; color: #fff; }
+
+#indicators .card { border: 0; border-left: 4px solid #e4572e; }
+.indicator-value { font-size: 1.6rem; font-weight: 700; }
+
+.order-card { height: 100%; border: 2px solid transparent; }
+.order-card:hover { border-color: #9aa5c0; }
+.order-card .card-body { display: flex; flex-direction: column; gap: 0.25rem; }
+.order-card .btn { margin-top: auto; }
