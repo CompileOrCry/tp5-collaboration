@@ -42,6 +42,16 @@ function bindEvents() {
     render();
   });
 
+    document.getElementById("reset-btn").addEventListener("click", () => {
+    setSearch("");
+    setStatus("all");
+    setCategory("all");
+    document.getElementById("search-input").value = "";
+    document.getElementById("status-select").value = "all";
+    document.getElementById("category-select").value = "all";
+    render();
+  });
+
   document.getElementById("orders-container").addEventListener("click", event => {
     const button = event.target.closest("[data-order-id]");
     if (!button) return;
