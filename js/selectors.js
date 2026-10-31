@@ -63,7 +63,10 @@ export function filterOrders(currentState) {
 
   return orders.filter(order => {
     const customer = getCustomerById(customers, order.customerId);
-    const matchSearch = term === "" || (customer && customer.name.toLowerCase().includes(term));
+    const matchSearch = term === "" || (customer && (
+      customer.name.toLowerCase().includes(term) ||
+      customer.city.toLowerCase().includes(term)
+    ));
     const matchStatus = status === "all" || order.status === status;
     const matchCategory = category === "all" || order.items.some(item => {
       const product = getProductById(products, item.productId);
